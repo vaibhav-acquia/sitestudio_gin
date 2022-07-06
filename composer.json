@@ -13,5 +13,11 @@
     "require": {
         "acquia/cohesion": ">=6.0",
         "drupal/gin": "^3.0"
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
     }
 }
