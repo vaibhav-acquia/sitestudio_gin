@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "acquia/cohesion": ">=6.0",
+        "acquia/cohesion": "^6.8",
         "drupal/gin": "^3.0"
     },
     "repositories": {
