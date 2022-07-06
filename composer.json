@@ -1,5 +1,5 @@
 {
-    "name": "acquia/sitestudio_gin",
+    "name": "drupal/sitestudio_gin",
     "type": "drupal-module",
     "description": "Integrates Acquia Site Studio with the Gin admin theme.",
     "license": "GPL-2.0+",
