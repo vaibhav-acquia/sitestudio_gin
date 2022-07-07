@@ -3,4 +3,4 @@ type: module
 description: Integrates Acquia Site Studio and the Gin admin theme.
 core_version_requirement: ^8 || ^9 ||^10
 dependencies:
-  - acquia:cohesion
+  - cohesion
