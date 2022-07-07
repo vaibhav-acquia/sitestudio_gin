@@ -2,7 +2,7 @@
     "name": "drupal/sitestudio_gin",
     "type": "drupal-module",
     "description": "Integrates Acquia Site Studio with the Gin admin theme.",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Acquia Engineering",
@@ -11,14 +11,7 @@
         }
     ],
     "require": {
-        "acquia/cohesion": "^6.8",
+        "acquia/cohesion": "^6.7.0",
         "drupal/gin": "^3.0"
-    },
-    "repositories": {
-       "cohesion": {
-            "type": "vcs",
-            "url": "https://github.com/acquia/cohesion.git"
-        }
-    },
-    "minimum-stability": "dev"
+    }
 }
