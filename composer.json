@@ -15,9 +15,9 @@
         "drupal/gin": "^3.0"
     },
     "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
+       "cohesion": {
+            "type": "vcs",
+            "url": "https://github.com/acquia/cohesion.git"
         }
     },
     "minimum-stability": "dev"
