@@ -81,6 +81,7 @@ function sitestudio_gin_gin_content_form_routes() {
   return [
     // Layout a component content using node form.
     'entity.component_content.add_form',
+    'entity.component_content.canonical',
     'entity.component_content.edit_form',
   ];
 }
