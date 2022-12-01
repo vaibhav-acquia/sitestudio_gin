@@ -19,7 +19,7 @@ td.views-field-title {
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open[data-toolbar-menu=open] {
-    padding-left: calc(var(--ginSidebarWidth) + var(--ginToolbarWidth)) !important;
+    padding-left: calc(var(--ginSidebarWidth) + var(--ginToolbarWidth) - 40px) !important;
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open #ssa-sidebar-browser {
@@ -47,4 +47,9 @@ form[class^="cohesion-"] .form-actions .dropbutton-wrapper {
 
 form[class^="cohesion-"] .form-actions .action-link.action-link--icon-trash {
   padding: calc(.75rem - 2px) calc(1.5rem - 2px);
+}
+
+/* Makes the Drupal Site Studio accordion titles bold to match the React ones */
+.coh-accordion-panel h2.panel-title {
+  font-weight: bold;
 }
