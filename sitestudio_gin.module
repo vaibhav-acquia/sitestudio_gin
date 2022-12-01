@@ -14,13 +14,9 @@ function sitestudio_gin_preprocess_page(&$variables) {
   // Global CSS overrides.
   $variables['#attached']['library'][] = 'sitestudio_gin/sitestudio_gin-global-overrides';
 
-  // Overrides only if Gin is the active theme, or a base theme of the active
-  // theme.
-  $active_theme = \Drupal::theme()->getActiveTheme();
-  $theme_keys = array_keys($active_theme->getBaseThemeExtensions());
-  $theme_keys[] = $active_theme->getName();
-
-  if (in_array('gin', $theme_keys)) {
+  // Overrides only if Gin is the active theme,
+  // or a base theme of the active theme.
+  if (_is_gin_or_gin_subtheme()) {
     $variables['#attached']['library'][] = 'sitestudio_gin/sitestudio_gin-gin-overrides';
 
     $route = \Drupal::routeMatch()->getRouteName();
@@ -44,11 +40,7 @@ function sitestudio_gin_preprocess_page(&$variables) {
  * @see claro_form_node_form_alter()
  */
 function sitestudio_gin_form_component_content_edit_form_alter(&$form, FormStateInterface $form_state) {
-  $active_theme = \Drupal::theme()->getActiveTheme();
-  $theme_keys = array_keys($active_theme->getBaseThemeExtensions());
-  $theme_keys[] = $active_theme->getName();
-
-  if (in_array('gin', $theme_keys)) {
+  if (_is_gin_or_gin_subtheme()) {
     $form['#theme'] = ['node_edit_form'];
     $form['#attached']['library'][] = 'claro/node-form';
 
@@ -90,4 +82,20 @@ function sitestudio_gin_gin_content_form_routes() {
     'entity.component_content.canonical',
     'entity.component_content.edit_form',
   ];
+}
+
+/**
+ * Helper function to check if Gin or a child theme of Gin is active.
+ */
+function _is_gin_or_gin_subtheme() {
+  $active_theme = \Drupal::theme()->getActiveTheme();
+  $theme_keys = array_keys($active_theme->getBaseThemeExtensions());
+  $theme_keys[] = $active_theme->getName();
+
+  if (in_array('gin', $theme_keys)) {
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
 }
