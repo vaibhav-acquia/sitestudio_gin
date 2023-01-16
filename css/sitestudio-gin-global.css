@@ -6,11 +6,11 @@
 }
 
 #coh-builder-btn {
-  color: var(--colorGinTextLight);
+  color: var(--gin-color-text-light);
 }
 
 #coh-builder-btn::before {
-  background: var(--colorGinIcons);
+  background: var(--gin-icon-color);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center center;

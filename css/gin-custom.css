@@ -10,24 +10,24 @@ td.views-field-title {
 
 /* Ensure Site Studio sidebar browser doesn't interfere with node editing. */
 .gin--edit-form.coh-element-browser {
-  padding-right: var(--ginSidebarWidth) !important;
+  padding-right: var(--gin-sidebar-width) !important;
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open,
 .gin--horizontal-toolbar.ssa-element-browser-modal-open {
-    padding-left: var(--ginSidebarWidth) !important;
+    padding-left: var(--gin-sidebar-width) !important;
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open[data-toolbar-menu=open] {
-    padding-left: calc(var(--ginSidebarWidth) + var(--ginToolbarWidth) - 40px) !important;
+    padding-left: calc(var(--gin-sidebar-width) + var(--gin-toolbar-width) - 40px) !important;
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open #ssa-sidebar-browser {
-  left: var(--ginToolbarWidthCollapsed) !important;
+  left: var(--gin-toolbar-width-collapsed) !important;
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open[data-toolbar-menu=open] #ssa-sidebar-browser {
-  left: var(--ginToolbarWidth) !important;
+  left: var(--gin-toolbar-width) !important;
 }
 
 /* Add the site studio toolbar icon. */
