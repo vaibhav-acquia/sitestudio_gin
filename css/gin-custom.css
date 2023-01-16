@@ -15,11 +15,11 @@ td.views-field-title {
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open,
 .gin--horizontal-toolbar.ssa-element-browser-modal-open {
-    padding-left: var(--gin-sidebar-width) !important;
+  padding-left: var(--gin-sidebar-width) !important;
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open[data-toolbar-menu=open] {
-    padding-left: calc(var(--gin-sidebar-width) + var(--gin-toolbar-width) - 40px) !important;
+  padding-left: calc(var(--gin-sidebar-width) + var(--gin-toolbar-width) - 40px) !important;
 }
 
 .gin--vertical-toolbar.ssa-element-browser-modal-open #ssa-sidebar-browser {
