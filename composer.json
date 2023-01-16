@@ -12,6 +12,6 @@
     ],
     "require": {
         "acquia/cohesion": "^6.7.0 || ^7",
-        "drupal/gin": "^3.0"
+        "drupal/gin": "^3.0@rc"
     }
 }
