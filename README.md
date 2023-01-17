@@ -24,7 +24,7 @@ Submit bug reports and feature suggestions, or track changes in the
 
 ## Requirements
 
-This module requires the Acquia CMS Toolbar module and the Gin admin theme to be
+This module requires the Site Studio and the Gin admin theme to be
 installed.
 
 
