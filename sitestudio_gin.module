@@ -5,6 +5,8 @@
  * Module hooks and alters for Admin UI customizations.
  */
 
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -97,5 +99,33 @@ function _is_gin_or_gin_subtheme() {
   }
   else {
     return FALSE;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @todo: Remove this when the Site Studio issue this is needed for is resolved.
+ * @see: https://www.drupal.org/project/sitestudio_gin/issues/3358530
+ */
+function sitestudio_gin_form_alter(&$form, FormStateInterface $form_state, $form_id): void {
+  if ($form_state->getFormObject() instanceof EntityFormInterface
+    && $form_state->getFormObject()->getEntity() instanceof FieldableEntityInterface) {
+    $entity = $form_state->getFormObject()->getEntity();
+    // Check that there is a Layout canvas field on the entity.
+    foreach ($entity->getFieldDefinitions() as $field) {
+      if ($field->getType() == 'cohesion_entity_reference_revisions') {
+        // If there is a layout canvas field, add a fake submit button to the form.
+        $form['sitestudio_gin_fake_submit'] = [
+          '#type' => 'submit',
+          '#value' => t('Submit'),
+          '#disabled' => TRUE,
+          '#attributes' => [
+            'style' => 'display: none;'
+          ],
+        ];
+        return;
+      }
+    }
   }
 }
