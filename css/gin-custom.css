@@ -45,10 +45,6 @@ td.views-field-title {
   max-width: 100%;
 }
 
-form[class^="cohesion-"] .form-actions .dropbutton-wrapper {
-  margin-top: 1rem;
-}
-
 form[class^="cohesion-"] .form-actions .action-link.action-link--icon-trash {
   padding: calc(.75rem - 2px) calc(1.5rem - 2px);
 }
